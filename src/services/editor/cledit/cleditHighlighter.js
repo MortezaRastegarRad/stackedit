@@ -138,6 +138,7 @@ function Highlighter(editor) {
       const sectionElt = document.createElement('div');
       sectionElt.className = 'cledit-section';
       sectionElt.innerHTML = html;
+      sectionElt.setAttribute('dir', 'auto');
       section.setElement(sectionElt);
       this.$trigger('sectionHighlighted', section);
     };

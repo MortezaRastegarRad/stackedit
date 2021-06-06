@@ -10,9 +10,9 @@ extensionSvc.onInitConverter(2, (markdown, options) => {
   if (options.math) {
     markdown.use(markdownItMath);
     markdown.renderer.rules.inline_math = (tokens, idx) =>
-      `<span class="katex--inline">${markdown.utils.escapeHtml(tokens[idx].content)}</span>`;
+      `<span class="katex--inline" dir="ltr">${markdown.utils.escapeHtml(tokens[idx].content)}</span>`;
     markdown.renderer.rules.display_math = (tokens, idx) =>
-      `<span class="katex--display">${markdown.utils.escapeHtml(tokens[idx].content)}</span>`;
+      `<span class="katex--display" dir="ltr">${markdown.utils.escapeHtml(tokens[idx].content)}</span>`;
   }
 });
 
